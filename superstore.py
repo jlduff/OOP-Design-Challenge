@@ -2,7 +2,7 @@ class House:
     has_basement = False
     has_garage = False 
 
-    def __init__(self, squarefootage:int, flooring):
+    def __init__(self, squarefootage:str, flooring):
         self.squarefootage = squarefootage 
         self.flooring = flooring
     
@@ -26,10 +26,10 @@ class Bedroom(House):
     has_bed = False 
     has_dresser = False
 
-    def __init__(self, lamp, closet, rug:str):
+    def __init__(self, lamp, closet, flooring:str):
         self.lamp = lamp
         self.closet = closet
-        self.rug = rug
+        self.flooring = flooring
 
     def add_lamp(self): 
         print("A lamp has been added to the bedroom.")
@@ -53,8 +53,8 @@ class Bedroom(House):
         else: 
             print("This bedroom lacks a dresser.")
 
-test_bedroom = Bedroom("lamp", "closet", "rug")
-print(test_bedroom.add_rug())
+test_bedroom = Bedroom("lamp", "closet", "flooring")
+print(test_bedroom.add_flooring())
 
 class LivingRoom(House): 
     has_couch = False 
