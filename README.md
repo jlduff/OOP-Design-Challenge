@@ -1,1 +1,2 @@
 #OOP-Design-Challenge
+This project uses the principles of object-oriented programming that we have learnt this term and applies them to a house. A house's many rooms are themselves treated as individual units, but form the composition of the house itself, the parent class. Additionally, objects and attributes of each significant room can be treated as objects, as they make up or add to the class (room) which they belong to. 

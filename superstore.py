@@ -103,7 +103,7 @@ class Kitchen(House):
     def add_fridge(self): 
         print("There is now a fridge in the kitchen.")
 
-    @classmethod
+@classmethod
     def update_has_cupboards(cls, has_cupboards)
     cls.has_cupboards = has_cupboards 
     if cls.has_cupboards == True: 
