@@ -103,13 +103,21 @@ class Kitchen(House):
     def add_fridge(self): 
         print("There is now a fridge in the kitchen.")
 
-@classmethod
-    def update_has_cupboards(cls, has_cupboards)
-    cls.has_cupboards = has_cupboards 
-    if cls.has_cupboards == True: 
-        print("This kitchen has cupboards.")
-    else: 
-        print("This kitchen lacks cupboards.")
+    @classmethod
+        def update_has_cupboards(cls, has_cupboards)
+        cls.has_cupboards = has_cupboards 
+        if cls.has_cupboards == True: 
+            print("This kitchen has cupboards.")
+        else: 
+            print("This kitchen lacks cupboards.")
+
+    @classmethod 
+        def update_has_pantry(cls, has_pantry)
+        cls.has_pantry = has_pantry 
+        if cls.has_pantry == True: 
+            print("This kitchen has a pantry.")
+        else: 
+            print("This kitchen lacks a pantry.")
 
 test_kitchen = Kitchen("self", "utensils", "fridge")
 print(test_kitchen.add_fridge)
