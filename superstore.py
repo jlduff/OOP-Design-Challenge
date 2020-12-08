@@ -53,7 +53,7 @@ class Bedroom(House):
         else: 
             print("This bedroom lacks a dresser.")
 
-test_bedroom = Bedroom("str", "sks", "rug")
+test_bedroom = Bedroom("lamp", "closet", "rug")
 print(test_bedroom.add_rug())
 
 class LivingRoom(House): 
@@ -83,14 +83,27 @@ class LivingRoom(House):
         else: 
             print("This living room lacks a fireplace.") 
 
-test_LivingRoom = LivingRoom("str", "sks", "television")
-print(test_bedroom.add_television())
+test_livingroom = LivingRoom("self", "coffee_table", "television")
+print(test_livingroom.add_television())
 
 class Kitchen(House): 
     has_cupboards = False 
     has_pantry = False 
 
-    def __init__(self, utensils, fridge):
+    def __init__(self, utensils, fridge:str):
         self.utensils = utensils
         self.fridge = fridge 
+    
+    def add_fridge(self): 
+        print("There is now a fridge in the kitchen.")
 
+    @classmethod
+    def update_has_cupboards(cls, has_cupboards)
+    cls.has_cupboards = has_cupboards 
+    if cls.has_cupboards == True: 
+        print("This kitchen has cupboards.")
+    else: 
+        print("This kitchen lacks cupboards.")
+
+test_kitchen = Kitchen("self", "utensils", "fridge")
+print(test_kitchen.add_fridge)
