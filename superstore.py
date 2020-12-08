@@ -2,9 +2,12 @@ class House:
     has_basement = False
     has_garage = False 
 
-    def __init__(self, squarefootage:str, flooring):
+    def __init__(self, squarefootage:int, flooring:str, paint:str):
         self.squarefootage = squarefootage 
         self.flooring = flooring
+    
+    def add_paint(self):
+        print("Paint has been added to the house.")
     
     @classmethod 
     def update_has_basement(cls, has_basement):
@@ -21,6 +24,9 @@ class House:
             print("This house has a garage.")
         else: 
             print("This house lacks a garage.")
+
+test_house = House("self", "squarefootage", "flooring", "paint")
+print(test_house.add_paint)
 
 class Bedroom(House): 
     has_bed = False 
@@ -53,7 +59,7 @@ class Bedroom(House):
         else: 
             print("This bedroom lacks a dresser.")
 
-test_bedroom = Bedroom("lamp", "closet", "flooring")
+test_bedroom = Bedroom("self", "lamp", "closet", "flooring")
 print(test_bedroom.add_flooring())
 
 class LivingRoom(House): 
